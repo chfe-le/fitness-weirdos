@@ -1,4 +1,4 @@
-# fitness Weirdos - Insane Gym Website
+# Fitness Weirdos - Insane Gym Website
 
 **Web Development ss26 Group Project**
 
