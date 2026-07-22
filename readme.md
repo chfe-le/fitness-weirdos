@@ -21,7 +21,7 @@ To claim a task: edit this file, put your name next to the task, commit with the
 | Page | File | Claimed by | Notes |
 |------|------|------------|-------|
 | Home | `index.html` | | Hero, about, testimonials, before/after photos, embedded map or video |
-| Services | `services.html` | | Membership pricing (JS/JSON), classes, infusion bar, smoothie bar, Protein Fanatics |
+| Services | `services.html` | | Nyeri | Membership pricing (JS/JSON), classes, infusion bar, smoothie bar, Protein Fanatics |
 | Resources | `resources.html` | Wyatt | Fitness & nutrition links, supplement info, embedded video |
 | Contact / Feedback | `contact.html` | Christina (?) | Form with name, email, message, membership dropdown |
 
