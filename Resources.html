@@ -1,3 +1,5 @@
+
+Resources · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,23 +9,84 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
+ 
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="resources.html">Resources</a>
     <a href="contact.html">Contact</a>
   </nav>
-
+ 
   <main>
-    <h2>Purchases to support your fittness journey</h2>
-    <img src="image/Fittness die.jpg" alt="Foam six-sided fittness dice">
+    <section class="section-block" style="margin-top:0;border-top:none;padding-top:0;" aria-labelledby="page-head">
+ 
+      <h1 id="page-head">Fitness Resources</h1>
+      <h2 id="sub-head">Trending Diets</h2>
+ 
+      <div class="resource-grid">
+        <div class="resource-card">
+          <a href="https://carnivorestyle.com/carnivore-diet/">The Carnivore Diet</a>
+          <img src="images/res-raw.jpg" alt="Raw meat on a plate">
+        </div>
+ 
+        <div class="resource-card">
+          <a href="https://www.muscleandfitness.com/nutrition/gain-mass/become-modern-day-warrior-diet-broke-all-rules/">The Warrior Diet</a>
+          <img src="images/res-warrior.jpg" alt="Warrior statue">
+        </div>
+ 
+        <div class="resource-card">
+          <a href="https://dietsinreview.com/diets/the-cigarette-diet/">The Cigarette Diet</a>
+          <img src="images/res-cigarette.jpg" alt="Cigarettes">
+        </div>
+      </div>
+    </section>
+ 
+    <section class="supplemental" aria-labelledby="supplemental-heading">
+      <h2 id="supplemental-heading">Purchases to Support Your Wellness Journey</h2>
+ 
+      <div class="supplemental-links">
+        <div class="res-supplemental-links">
+          <img src="images/res-TRT.jpg" alt="Testosterone booster">
+          <a href="https://www.gnc.com/testosterone-booster/452372.html">Testosterone Booster</a>
+          <p>A daily supplement designed to help support healthy testosterone levels, energy, and muscle recovery.</p>
+        </div>
+ 
+        <div class="res-supplemental-links">
+          <img src="images/res-fitdie.jpg" alt="Foam six-sided fitness dice">
+          <a href="https://www.amazon.com/Skywin-Workout-Dice-Exercise-Equipment/dp/B08967Q8L1/ref=sr_1_1_sspa">Fitness Dice</a>
+          <p>Soft foam dice that turn your workout into a game — roll to randomize exercises and reps on the fly.</p>
+        </div>
+ 
+        <div class="res-supplemental-links">
+          <img src="images/res-jawexcercises.jpg" alt="Jaw strengthener">
+          <a href="https://www.amazon.com/Jawzrsize-Custom-Enhancer-Bundles-Exerciser/dp/B0BY4P19W6/ref=sxbs_pa_sp_search_thematic_btf_sspa">Jaw Exerciser</a>
+          <p>A resistance-based jaw trainer that helps tone facial muscles and build a stronger, more defined jawline.</p>
+        </div>
+ 
+        <div class="res-supplemental-links">
+          <img src="images/res-balance.jpg" alt="Balance bracelet">
+          <a href="https://www.amazon.com/Power-Balance-Performance-Wristbands-Lightweight/dp/B0GT87GQD6/ref=sr_1_7">Balance Bracelet</a>
+          <p>A lightweight performance wristband athletes wear for balance, focus, and everyday comfort.</p>
+        </div>
+      </div>
+    </section>
+ 
+    <section class="video" aria-labelledby="wellness-heading">
+      <h2 id="wellness-heading">A Fit Body and Mind</h2>
+ 
+      <div class="video-content">
+        <video controls poster="images/res-video-tn.png">
+          <source src="images/res-video.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+      </div>
+    </section>
   </main>
-
+ 
   <footer>
-    <p>© 2026 Insane Gym</p>
+    <p>&copy; 2026 Insane Gym</p>
   </footer>
-
+ 
   <script src="script.js"></script>
 </body>
 </html>
