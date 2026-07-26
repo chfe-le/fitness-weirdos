@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page name | Meridian Wellness Collective</title>
+  <meta name="description" content="One sentence describing this page." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Header: same on all four pages. -->
+  <header class="paperwork">
+    <p class="stamp">Form MWC-000 &middot; Revision 14</p>
+    <a class="brand" href="index.html">Meridian Wellness Collective</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- Every section gets class="ad" or class="paperwork" in alternating order.
+     If it has a number in it, it is paperwork. -->
+
+    <!-- An ad section. one big '.promise' per page. -->
+    <section class="ad" aria-labelledby="promise-heading">
+      <h1 id="promise-heading" class="promise">
+        The big promise goes here<a class="fn-ref" id="ref-1" href="#fn-1" aria-label="Footnote 1">1</a>
+      </h1>
+      <p>A sentence or two of supporting copy, written by an institution 
+        that has never been asked a follow-up question.</p>
+    </section>
+
+    <!-- A paperwork section. Hours, prices, schedules, forms. -->
+    <section class="paperwork" aria-labelledby="admin-heading">
+      <p class="stamp">Section 02</p>
+      <h2 id="admin-heading">Section heading</h2>
+      <p>Body copy goes here.</p>
+    </section>
+
+    <!-- The two photos are the same file with the same alt text.
+         The captions can differ. That is part of the joke, wink =) -->
+    <section class="paperwork" aria-labelledby="evidence-heading">
+      <h2 id="evidence-heading">Verified member progress<a class="fn-ref" id="ref-2" href="#fn-2" aria-label="Footnote 2">2</a></h2>
+
+      <figure>
+        <img src="images/member-0041.jpg" alt="A person standing in front of a plain wall in gym clothes." width="800" height="1000" />
+        <figcaption>
+          Before
+          <span class="field-note">Captured 14 March, 9:12am</span>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/member-0041.jpg" alt="A person standing in front of a plain wall in gym clothes." width="800" height="1000" />
+        <figcaption>
+          After, fourteen months
+          <span class="field-note">Captured 14 March, 9:12am</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- The footnote list. Last section on every page. 
+     script.js fills this in. -->
+    <section class="paperwork" aria-labelledby="register-heading">
+      <h2 id="register-heading">Register of qualifications</h2>
+      <ol class="register" id="register-list">
+        <li>Loading&hellip;</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer class="paperwork">
+    <p class="stamp">Form MWC-000 &middot; Revision 14</p>
+    <p>&copy; 2026 Meridian Wellness Collective</p>
+    <p><a href="contact.html">Contact</a> &middot; <a href="resources.html">Resources</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

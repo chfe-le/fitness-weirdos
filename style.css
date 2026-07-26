@@ -1,0 +1,211 @@
+/* Meridian Wellness Collective: shared stylesheet
+   
+   Sections 1 to 4 are done. Colors, fonts, the two section
+   types, accessibility.
+
+   Section 5, the layout, We build that
+   together at the meeting.*/
+
+
+/* 1. Colors and fonts */
+:root {
+  /* The ad. Dark sections. */
+  --ad-bg:      #170B27;
+  --ad-surface: #241137;
+  --ad-text:    #EDE6F5;
+  --ad-cyan:    #35E5E0;
+  --ad-lilac:   #C3A9E8;
+  --ad-magenta: #FF3D9A;
+
+  /* The paperwork. Light sections. */
+  --paper-bg:      #E8E2D4;
+  --paper-surface: #F2EEE4;
+  --paper-text:    #14120E;
+  --paper-muted:   #55503F;
+  --paper-red:     #B4232A;
+  --paper-line:    #8F887A;
+
+  /* Fonts */
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body:    Verdana, Geneva, Arial, sans-serif;
+  --font-doc:     "Courier New", Courier, monospace;
+
+  /* Spacing */
+  --gap:      1.25rem;
+  --gap-lg:   2.5rem;
+  --pad-page: 1.25rem;
+}
+
+
+/* 2. BASE */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper-bg);
+  color: var(--paper-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.25rem; }
+
+/* **The promise. One per page. Hero Text*/
+.promise {
+  font-family: var(--font-display);
+  font-size: 2.75rem;
+  line-height: 1.05;
+  margin: 0 0 1rem;
+  max-width: 18ch;
+}
+
+p { margin: 0 0 1rem; }
+p:last-child { margin-bottom: 0; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* Courier is for anything that looks like a form: things like 
+stamps, dates, footnotes. 16 point or larger, please*/
+.stamp, .field-note, .register {
+  font-family: var(--font-doc);
+  font-size: 1rem;
+}
+
+.stamp {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* 3. The two section types: Put .ad or .paperwork on a <section>. 
+That one class sets the colors for the whole block. */
+.ad {
+  background: var(--ad-bg);
+  color: var(--ad-text);
+}
+.ad a { color: var(--ad-cyan); }
+.ad a:hover { color: var(--ad-magenta); }
+.ad h1, .ad h2, .ad h3 { color: var(--ad-text); }
+.ad .stamp, .ad .field-note { color: var(--ad-lilac); }
+
+.paperwork {
+  background: var(--paper-bg);
+  color: var(--paper-text);
+}
+.paperwork a { color: var(--paper-red); }
+.paperwork a:hover { color: var(--paper-text); }
+.paperwork .stamp, .paperwork .field-note { color: var(--paper-muted); }
+
+
+/* 4. Accessability section */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  background: var(--paper-text);
+  color: #FFFFFF;
+  padding: 0.75rem 1rem;
+}
+.skip-link:focus { left: 0; }
+
+:focus-visible {
+  outline: 3px solid var(--paper-red);
+  outline-offset: 2px;
+}
+.ad :focus-visible { outline-color: var(--ad-cyan); }
+
+/* The footnote number next to a promise */
+.fn-ref {
+  font-family: var(--font-doc);
+  font-size: 0.75em;
+  vertical-align: super;
+  line-height: 0;
+}
+
+/* The list of footnotes at the bottom of the page */
+.register {
+  max-width: 70ch;
+  color: var(--paper-muted);
+  line-height: 1.55;
+}
+.register li { padding: 0.5rem 0; }
+
+
+/*Images */
+.split { display: grid; grid-template-columns: 1fr; gap: var(--gap-lg); }
+.split > figure { margin: 0; }
+.split img { width: 100%; border: 1px solid var(--paper-line); }
+.split figcaption { padding-top: 0.5rem; font-size: 0.9375rem; }
+.split .field-note { display: block; color: var(--paper-muted); }
+
+
+/* 5. LAYOUT: We will this together at the meeting.
+   Mobile first? one breakpoint at 768px. */
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2.5rem var(--pad-page);
+}
+
+.lede { font-size: 1.125rem; }
+.ad .lede { color: var(--ad-lilac); }
+.paperwork .lede { color: var(--paper-muted); }
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 1.5rem;
+  font-size: 0.9375rem;
+}
+
+caption {
+  font-family: var(--font-doc);
+  font-size: 1rem;
+  text-align: left;
+  padding-bottom: 0.5rem;
+  color: var(--paper-muted);
+}
+
+thead th {
+  font-family: var(--font-doc);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.625rem 0.75rem;
+  border-bottom: 2px solid var(--paper-line);
+}
+
+tbody th,
+tbody td {
+  text-align: left;
+  padding: 0.625rem 0.75rem;
+  border-bottom: 1px solid var(--paper-line);
+  vertical-align: top;
+}
+
+/* Tables sitting in a dark section */
+.ad caption { color: var(--ad-lilac); }
+.ad thead th,
+.ad tbody th,
+.ad tbody td { border-bottom-color: var(--ad-line); }
+
+
+   /* 6. Individual Pages:
+   Add your rules under your name. Prefix your class names so
+   they don't collide with anyone else's. */
+
+/*  Services - Nyeri. Prefix: svc-  */
+
+
+/*  Resources - Wyatt. Prefix: res- */
+
+
+/*  Contact - Christina. Prefix: con-  */
