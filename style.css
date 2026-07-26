@@ -23,6 +23,7 @@
   --paper-text:    #14120E;
   --paper-muted:   #55503F;
   --paper-red:     #B4232A;
+  --paper-line:    #8F887A;
 
   /* Fonts */
   --font-display: Georgia, "Times New Roman", serif;
@@ -136,8 +137,65 @@ That one class sets the colors for the whole block. */
 }
 .register li { padding: 0.5rem 0; }
 
+
+/*Images */
+.split { display: grid; grid-template-columns: 1fr; gap: var(--gap-lg); }
+.split > figure { margin: 0; }
+.split img { width: 100%; border: 1px solid var(--paper-line); }
+.split figcaption { padding-top: 0.5rem; font-size: 0.9375rem; }
+.split .field-note { display: block; color: var(--paper-muted); }
+
+
 /* 5. LAYOUT: We will this together at the meeting.
-   Mobile first, one breakpoint at 768px. */
+   Mobile first? one breakpoint at 768px. */
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2.5rem var(--pad-page);
+}
+
+.lede { font-size: 1.125rem; }
+.ad .lede { color: var(--ad-lilac); }
+.paperwork .lede { color: var(--paper-muted); }
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 1.5rem;
+  font-size: 0.9375rem;
+}
+
+caption {
+  font-family: var(--font-doc);
+  font-size: 1rem;
+  text-align: left;
+  padding-bottom: 0.5rem;
+  color: var(--paper-muted);
+}
+
+thead th {
+  font-family: var(--font-doc);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.625rem 0.75rem;
+  border-bottom: 2px solid var(--paper-line);
+}
+
+tbody th,
+tbody td {
+  text-align: left;
+  padding: 0.625rem 0.75rem;
+  border-bottom: 1px solid var(--paper-line);
+  vertical-align: top;
+}
+
+/* Tables sitting in a dark section */
+.ad caption { color: var(--ad-lilac); }
+.ad thead th,
+.ad tbody th,
+.ad tbody td { border-bottom-color: var(--ad-line); }
 
 
    /* 6. Individual Pages:
