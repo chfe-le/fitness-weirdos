@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: "IBM Plex Sans", sans-serif;
+    background: #F2F1EC;
+}
+
+h1,
+h2,
+h3,
+.motto,
+p,
+dl,
+form {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+header {
+    margin: 0;
+    background-size: cover;
+    padding-left: 100px;
+    padding-right: 100px;
+    background: #D4D0C8;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+dt {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+dd {
+    padding-bottom: 3px;
+}
+
+
+nav,
+nav a {
+    background: #2F3433;
+    color: #F2F1EC;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    align-items: center;
+    text-decoration: none;
+
+
+
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    justify-content: center;
+}
+
+img {
+    justify-content: flex-end;
+}
+
+
+
+form {
+
+    background-color: #D4D0C8;
+    border: 1px solid #AAB4A0;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+form div {
+    padding-block: 10px;
+}
+
+footer {
+
+    background-color: #2F3433;
+    color: #F2F1EC;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+h1,
+h2 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+}
+
+h2 {
+    color: #4C6B6A;
+}
