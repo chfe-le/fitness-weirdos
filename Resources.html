@@ -1,5 +1,3 @@
-
-Resources · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,18 +8,35 @@ Resources · HTML
 </head>
 <body>
  
+<header>
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="resources.html">Resources</a>
     <a href="contact.html">Contact</a>
   </nav>
+</header>
  
   <main>
     <section class="section-block" style="margin-top:0;border-top:none;padding-top:0;" aria-labelledby="page-head">
  
       <h1 id="page-head">Fitness Resources</h1>
-      <h2 id="sub-head">Trending Diets</h2>
+      <section class="video" aria-labelledby="wellness-heading">
+      <h2 id="wellness-heading">Do you want to be strong like him?</h2>
+ 
+      <div class="video-content">
+        <figure style="margin:0;">
+          <video controls poster="images/res-video-tn.png">
+            <source src="images/res-video.mp4" type="video/mp4">
+            Your browser doesn't support embedded video.
+          </video>
+          <figcaption class="field-note">Member 11102 — PR deadlift, 400 lb</figcaption>
+        </figure>
+      </div>
+
+
+
+      <h2 id="sub-head"> Try one of these trending diets</h2>
  
       <div class="resource-grid">
         <div class="resource-card">
@@ -71,16 +86,7 @@ Resources · HTML
       </div>
     </section>
  
-    <section class="video" aria-labelledby="wellness-heading">
-      <h2 id="wellness-heading">A Fit Body and Mind</h2>
- 
-      <div class="video-content">
-        <video controls poster="images/res-video-tn.png">
-          <source src="images/res-video.mp4" type="video/mp4">
-          Your browser doesn't support embedded video.
-        </video>
-      </div>
-    </section>
+    
   </main>
  
   <footer>

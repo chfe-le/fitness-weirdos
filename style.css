@@ -17,6 +17,9 @@
   --ad-cyan:    #35E5E0;
   --ad-lilac:   #C3A9E8;
   --ad-magenta: #FF3D9A;
+  --ad-line:    #4A3A63;
+
+
 
   /* The paperwork. Light sections. */
   --paper-bg:      #E8E2D4;
@@ -207,8 +210,49 @@ tbody td {
 
 
 /*  Resources - Wyatt. Prefix: res- */
+header {
+  background: var(--ad-bg);
+  padding: 1rem var(--pad-page);
+}
+header nav a {
+  color: var(--ad-text);
+  font-family: var(--font-body);
+  margin-right: 1.25rem;
+  text-decoration: none;
+}
+header nav a:hover {
+  color: var(--ad-cyan);
+}
+#page-head {
+  text-align: center;
+}
 
-resource-grid {
+#wellness-heading {
+  text-align: center;
+}
+.video {
+  margin: 0 0 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+ 
+.video-content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+ 
+.video-content video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+ 
+.video-content figcaption {
+  padding-top: 0.5rem;
+  text-align: center;
+}
+ 
+.resource-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.25rem;
@@ -246,12 +290,14 @@ resource-grid {
 }
  
 .resource-card img {
-  width: 110px;
-  height: 80px;
-  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  background: #f2f2f2; /* fills any empty space contain leaves around non-square photos */
   border-radius: 8px;
   flex-shrink: 0;
 }
+
  
 /* ---------- Supplemental products grid ---------- */
 .supplemental {
@@ -268,7 +314,7 @@ resource-grid {
  
 .res-supplemental-links {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   background: #fff;
   border: 1px solid #e5e5e5;
   border-radius: 10px;
@@ -317,19 +363,7 @@ resource-grid {
   }
 }
  
-/* ---------- Video section ---------- */
-.video {
-  margin-top: 2.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid #e0e0e0;
-  text-align: center;
-}
  
-.video-content video {
-  width: 100%;
-  max-width: 640px;
-  border-radius: 10px;
-}
  
 /* ---------- Footer ---------- */
 footer {
