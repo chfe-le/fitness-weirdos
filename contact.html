@@ -153,20 +153,19 @@
                                 nameInput.name= `childName${i}`;
                                 nameInput.required = true;
                                 
-                                const ageLabel = document.createElement('label');
-                                ageLabel.setAttribute('for', `childAge${i}`);
-                                ageLabel.textContent = `Child #${i} Age`;
-                                const ageInput= document.createElement('input');
-                                ageInput.type= 'number';
-                                ageInput.id=`childAge${i}`;
-                                ageInput.name= `childAge${i}`;
-                                ageInput.min=0;
-                                ageInput.max=18;
-                                ageInput.required = true;
+                                const dobLabel = document.createElement('label');
+                                dobLabel.setAttribute('for', `childDob${i}`);
+                                dobLabel.textContent = 'Child #${i} Date of Birth';
+
+                                const dobInput= document.createElement('input');
+                                dobInput.type= 'date';
+                                dobInput.id='childDob${i}';
+                                dobInput.name= 'childDob${i}';       
+                                dobInput.required = true;
                                 fieldset.appendChild(nameLabel);
                                 fieldset.appendChild(nameInput);
-                                fieldset.appendChild(ageLabel);
-                                fieldset.appendChild(ageInput);
+                                fieldset.appendChild(dobLabel);
+                                fieldset.appendChild(dobInput);
                                 childrenContainer.appendChild(fieldset);
                                 }
                                 });
@@ -176,7 +175,7 @@
                         <label for="specialInstructions">"Do any of the children require special instructions? If so, please describe:"<span class="required">*</span></label>
                         <input type="text" id="special" placeholder="Special Instructions">
                     </div>
-                    
+
                 </form>
             </div>
         </section>
