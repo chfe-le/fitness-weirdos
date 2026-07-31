@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Insane Gym</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Contact | Meridian Wellness Collective</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
@@ -24,23 +24,210 @@
     <main>
         <section class="contact-description">
             <div class="container">
-                <h1>WHAT SERVICES WE PROVIDE</h1>
-                <p>Interest in a lifetime membership? Child training services? Use the form below</p>
+                <h1>Ready to Join?</h1>
+                <p>Interest in a lifetime membership? Use the form below</p>
             </div>
         </section>
         <section class="form-layout">
             <div class="container">
                 <form>
                     <div class="field">
-                        <label for="Name">"Your Name"<span class="required">*</span></label>
-                        <input type="text" id="name" name="name" required autocomplete="name" placeholder="Name">
+                        <label for="FirstName">"Your First Name"<span class="required">*</span></label>
+                        <input type="text" id="fname" name="fname" required autocomplete="first-name" placeholder="First Name">
+                    </div>
+                    <div class="field">
+                        <label for="MiddleName">"Your Middle Name"<span class="required">*</span></label>
+                        <input type="text" id="mname" name="middle-name" required autocomplete="middle-name" placeholder="Middle Name">
+                    </div>
+                    <div class="field">
+                        <label for="LastName">"Your Last Name"<span class="required">*</span></label>
+                        <input type="text" id="lname" name="lname" required autocomplete="family-name" placeholder="Last Name">
+                    </div>
+                    <div class="field">
+                        <label for="Email">"Your Email"<span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="Email">
+                    </div>
+                    <div class="phone">
+                        <label for="PhoneNumber">"Your Phone Number"<span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required autocomplete="phone" placeholder="Phone">
+                    </div>
+                    <div class="dob">
+                        <label for="DateOfBirth">"Your Date of Birth"<span class="required">*</span></label>
+                        <input type="date" id="date" name="date" required autocomplete="date" placeholder="Date of Birth">
+                    </div>
+                    <div class="field">
+                        <label for="Address">"Your Street Address"<span class="required">*</span></label>
+                        <input type="text" id="street-address" name="street-address" required autocomplete="address-line1" placeholder="Street Address">
+                    </div>
+                    <div class="field">
+                        <label for="PostalCode">"Your Postal/Zip Code"<span class="required">*</span></label>
+                        <input type="text" id="post" name="post" required autocomplete="postal-code" placeholder="Post/Zip Code">
+                    </div>
+                    <div class="field">
+                        <label for="State">"Your State"<span class="required">*</span></label>
+                        <input type="text" id="state" name="state" required autocomplete="state" placeholder="State">
+                    </div>
+                    <!--COULD ADD DROP DOWNS. MARITAL/FAMILY QUESTIONS?-->
+                    <div class="field">
+                        <label for="Blood">"Your Blood Type"<span class="required">*</span></label>
+                        <input type="text" id="blood" name="blood" required autocomplete="blood" placeholder="Blood Type">
+                    </div>
+                    <div class="field">
+                        <label for="Diet">"Your Current Diet"<span class="required">*</span></label>
+                        <input type="text" id="diet" name="diet" required autocomplete="diet" placeholder="Diet">
+                    </div>
+                    <div class="field">
+                        <label for="Career">"Your Current Career"<span class="required">*</span></label>
+                        <input type="text" id="career" name="career" required autocomplete="career" placeholder="Career">
+                    </div>
+                    <div class="field">
+                        <label for="Income">"Your Current Yearly Income"<span class="required">*</span></label>
+                        <input type="number" step="0.01" min="0" placeholder="0.00" aria-label="Amount in USD" id="income" name="income" required autocomplete="income" placeholder="Income">
+                    </div>
+                    <div class="field">
+                        <label for="MaritalStatus">"Your Marital Status"<span class="required">*</span></label>
+                        <input type="text" id="marital" name="marital" required autocomplete="marital" placeholder="Marital Status">
+                    </div>
+                    <div class="field">
+                        <label for="numAdults">"How many adult Meridianites would like to join us?"<span class="required">*</span></label>
+                        <input type="number" id="numAdults" name="numAdults" required autocomplete="numAdults" placeholder="Number of Adult Members">
+                    </div>
+                    <div class="field">
+                        <label for="services">"Which of Meridian's services are you most interested in?"<span class="required">*</span></label>
+                        <input type="text" id="services" name="services" required autocomplete="service" placeholder="Services">
+                    </div>
+                    <div class="field">
+                        <label for="planSelection">"Which plan are you interested in?"<span class="required">*</span></label>
+                        <input type="text" id="plan" name="plan" required autocomplete="plan" placeholder="Plan Selection">
+                    </div>
+                    <div class="app">
+                        <label for="Application">"Please attach application for consideration"<span class="required">*</span></label>
+                        <input type="file" id="app" name="app" accept=".pdf" required autocomplete="app" placeholder="Application">
                     </div>
                 </form>
             </div>
         </section>
-    </main>
 
+        <section class="childcare-description">
+            <div class="container">
+                <h1>Do you have Children?</h1>
+                <p>Care to pass on your lifetime membership to your child? We'll take great care of them in our child training center.</p>
+            </div>
+        </section>
+        <section class="form-layout">
+            <div class="container">
+                <form id="dynamic-form">
+                    <div class="field">
+                        <label for="numChildren">"How many junior Meridianites (aka children) would you like to enroll?"<span class="required">*</span></label>
+                        <select id="numChildren">
+                            <option value="">-- Select --</option></select>
+                            <div id="childrenContainer"></div>
+                            <script>
+                                const numChildrenSelect = document.getElementById('numChildren');
+                                const childrenContainer = document.getElementById('childrenContainer');                            
+                                for (let i = 1; i <= 10; i++) 
+                                {
+                                const option = document.createElement('option');
+                                option.value = i;
+                                option.textContent = i;
+                                numChildrenSelect.appendChild(option);
+                                }
+                                numChildrenSelect.addEventListener('change', function () 
+                                {
+                                const count = parseInt(this.value, 10);
+                                childrenContainer.innerHTML=''
+                                if (!count) return;
+                                for (let i = 1; i <= count; i++) {
+                                const fieldset = document.createElement('fieldset');
+                                
+                                const legend = document.createElement('legend');
+                                legend.textContent = `Child #${i}`;
+                                fieldset.appendChild(legend);
+                                
+                                const nameLabel = document.createElement('label');
+                                nameLabel.setAttribute('for', `childName${i}`);
+                                nameLabel.textContent = `Child #${i} Name`;
+                                const nameInput = document.createElement('input');
+                                nameInput.type= 'text';
+                                nameInput.id=`childName${i}`;
+                                nameInput.name= `childName${i}`;
+                                nameInput.required = true;
+                                
+                                const ageLabel = document.createElement('label');
+                                ageLabel.setAttribute('for', `childAge${i}`);
+                                ageLabel.textContent = `Child #${i} Age`;
+                                const ageInput= document.createElement('input');
+                                ageInput.type= 'number';
+                                ageInput.id=`childAge${i}`;
+                                ageInput.name= `childAge${i}`;
+                                ageInput.min=0;
+                                ageInput.max=18;
+                                ageInput.required = true;
+                                fieldset.appendChild(nameLabel);
+                                fieldset.appendChild(nameInput);
+                                fieldset.appendChild(ageLabel);
+                                fieldset.appendChild(ageInput);
+                                childrenContainer.appendChild(fieldset);
+                                }
+                                });
+                                </script>
+                    </div>
+                    <div class="field">
+                        <label for="specialInstructions">"Do any of the children require special instructions? If so, please describe:"<span class="required">*</span></label>
+                        <input type="text" id="special" placeholder="Special Instructions">
+                    </div>
+                    <!--<div class="field">
+                        <label for="MiddleName">"Your Middle Name"<span class="required">*</span></label>
+                        <input type="text" id="mname" name="middle-name" required autocomplete="middle-name" placeholder="Middle Name">
+                    </div>
+                    <div class="field">
+                        <label for="LastName">"Your Last Name"<span class="required">*</span></label>
+                        <input type="text" id="lname" name="lname" required autocomplete="family-name" placeholder="Last Name">
+                    </div>
+                    <div class="field">
+                        <label for="Email">"Your Email"<span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="Email">
+                    </div>
+                    <div class="phone">
+                        <label for="PhoneNumber">"Your Phone Number"<span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required autocomplete="phone" placeholder="Phone">
+                    </div>
+                    <div class="dob">
+                        <label for="DateOfBirth">"Your Date of Birth"<span class="required">*</span></label>
+                        <input type="date" id="date" name="date" required autocomplete="date" placeholder="Date of Birth">
+                    </div>
+                    <div class="field">
+                        <label for="Address">"Your Street Address"<span class="required">*</span></label>
+                        <input type="text" id="street-address" name="street-address" required autocomplete="address-line1" placeholder="Street Address">
+                    </div>
+                    <div class="field">
+                        <label for="PostalCode">"Your Postal/Zip Code"<span class="required">*</span></label>
+                        <input type="text" id="post" name="post" required autocomplete="postal-code" placeholder="Post/Zip Code">
+                    </div>
+                    <div class="field">
+                        <label for="State">"Your State"<span class="required">*</span></label>
+                        <input type="text" id="state" name="state" required autocomplete="state" placeholder="State">
+                    </div>
+                    UNSURE ABOUT THIS ONE - BUT ALSO COULD ADD DROP DOWNS
+                    <div class="field">
+                        <label for="Blood">"Your Blood Type"<span class="required">*</span></label>
+                        <input type="text" id="blood" name="blood" required autocomplete="blood" placeholder="Blood Type">
+                    </div>
+                    <div class="app">
+                        <label for="Application">"Please attach application for consideration"<span class="required">*</span></label>
+                        <input type="file" id="app" name="app" accept=".pdf" required autocomplete="app" placeholder="Application">
+                    </div> 
+                -->
+                </form>
+            </div>
+        </section>
+    </main>
+<!--- NEED DISCLAIMER NOTES FOR JSON REGISTER. A FEW IMAGES. MAKE THE FORM REALLY LONG-->
 </body>
-<footer class="site-footer">
-    <p>© 2026 Insane Gym</p>
+<footer class="paperwork site-footer">
+    <div class="wrap">
+    <p class="stamp">Form MWC-000 &middot; Revision 14</p>
+    <p>&copy; 2026 Meridian Wellness Collective</p>
+    <p><a href="contact.html">Contact</a> &middot; <a href="resources.html">Resources</a></p>
+    </div>
 </footer>
