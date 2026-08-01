@@ -175,3 +175,53 @@ var PLAN_DATA = [
     target.appendChild(card);
   });
 })();
+
+/* create numChildren interactivity for contact.html*/
+const numChildrenSelect = document.getElementById('numChildren');
+if (numChildrenSelect) {
+                        const childrenContainer = document.getElementById('childrenContainer');                            
+                        for (let i = 1; i <= 10; i++) 
+                        {
+                        const option = document.createElement('option');
+                        option.value = i;
+                        option.textContent = i;
+                        numChildrenSelect.appendChild(option);
+                        }
+                        numChildrenSelect.addEventListener('change', function () 
+                        {
+                        const count = parseInt(this.value, 10);
+                        childrenContainer.innerHTML=''
+                        if (!count) return;
+                        for (let i = 1; i <= count; i++) {
+                        const fieldset = document.createElement('fieldset');
+                                
+                        const legend = document.createElement('legend');
+                        legend.textContent = `Child #${i}`;
+                        fieldset.appendChild(legend);
+                           
+                        const nameLabel = document.createElement('label');
+                        nameLabel.setAttribute('for', `childName${i}`);
+                        nameLabel.textContent = `Child #${i} Name`;
+                        const nameInput = document.createElement('input');
+                        nameInput.type= 'text';
+                        nameInput.id=`childName${i}`;
+                        nameInput.name= `childName${i}`;
+                        nameInput.required = true;
+                           
+                        const dobLabel = document.createElement('label');
+                        dobLabel.setAttribute('for', `childDob${i}`);
+                        dobLabel.textContent = `Child #${i} Date of Birth`;
+
+                        const dobInput= document.createElement('input');
+                        dobInput.type= `date`;
+                        dobInput.id=`childDob${i}`;
+                        dobInput.name= `childDob${i}`;       
+                        dobInput.required = true;
+                        fieldset.appendChild(nameLabel);
+                        fieldset.appendChild(nameInput);
+                        fieldset.appendChild(dobLabel);
+                        fieldset.appendChild(dobInput);
+                        childrenContainer.appendChild(fieldset);
+                        }
+                        });
+                            
