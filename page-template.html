@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,83 +8,197 @@
   <meta name="description" content="One sentence describing this page." />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- Header: same on all four pages. -->
-  <header class="paperwork">
-    <p class="stamp">Form MWC-000 &middot; Revision 14</p>
-    <a class="brand" href="index.html">Meridian Wellness Collective</a>
-    <nav class="site-nav" aria-label="Main">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- HEADER
+       Copy this block onto your page as is. Two things change:
+       1. Move aria-current="page" onto your own page's link.
+       2. The revision number is yours. Each page is on its own
+          revision. Keep the header and footer numbers matching
+          within a page.
+       The phone number and hours line is optional. Drop the
+       whole .header-bar div if your page does not want it. -->
+  <header class="paperwork site-header">
+    <div class="header-bar">
+      <p class="stamp">Form MWC-000 &middot; Revision 14</p>
+      <p class="stamp header-contact">
+        <a href="tel:+13135550041">(313) 555-0041</a>
+        <span aria-hidden="true">&middot;</span>
+        Mon to Fri, 5:00am to 10:00pm
+      </p>
+    </div>
+
+    <div class="header-main">
+      <a class="brand" href="index.html">
+        Meridian Wellness Collective
+        <span class="brand-sub">Second floor &middot; Est. 2019</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="button button-primary header-cta" href="contact.html">Begin Intake</a>
+    </div>
   </header>
 
   <main id="main">
 
-    <!-- Every section gets class="ad" or class="paperwork" in alternating order.
-     If it has a number in it, it is paperwork. -->
+    <!-- EVERY SECTION NEEDS THE WRAP DIV.
+         <section> sets the background color. <div class="wrap">
+         sets the page padding and the max width. Leave the wrap
+         out and your text runs to the edge of the screen.
 
-    <!-- An ad section. one big '.promise' per page. -->
+         Sections alternate: class="ad" for the dark ones,
+         class="paperwork" for the light ones. If it has a number
+         in it, it is paperwork. -->
+
+    <!-- An ad section. One .promise per page, and it is the only
+         h1 on the page. -->
     <section class="ad" aria-labelledby="promise-heading">
-      <h1 id="promise-heading" class="promise">
-        The big promise goes here<a class="fn-ref" id="ref-1" href="#fn-1" aria-label="Footnote 1">1</a>
-      </h1>
-      <p>A sentence or two of supporting copy, written by an institution 
-        that has never been asked a follow-up question.</p>
+      <div class="wrap">
+        <p class="stamp">Section 01</p>
+        <h1 id="promise-heading" class="promise">
+          The big promise goes here<a class="fn-ref" id="ref-1" href="#fn-1" aria-label="Footnote 1">1</a>
+        </h1>
+        <p class="lede">A sentence or two of supporting copy, written by an institution that has never
+          been asked a follow-up question.</p>
+      </div>
     </section>
 
     <!-- A paperwork section. Hours, prices, schedules, forms. -->
     <section class="paperwork" aria-labelledby="admin-heading">
-      <p class="stamp">Section 02</p>
-      <h2 id="admin-heading">Section heading</h2>
-      <p>Body copy goes here.</p>
+      <div class="wrap">
+        <p class="stamp">Section 02</p>
+        <h2 id="admin-heading">Section heading</h2>
+        <p>Body copy goes here.</p>
+      </div>
     </section>
 
-    <!-- The two photos are the same file with the same alt text.
-         The captions can differ. That is part of the joke, wink =) -->
+    <!-- TWO COLUMN SECTION
+         .split puts an image beside text. One column on a phone,
+         two above 768px. Add .split-wide as well if the right
+         side is a table and needs more room. -->
+    <section class="paperwork" aria-labelledby="split-heading">
+      <div class="wrap">
+        <p class="stamp">Section 03</p>
+        <h2 id="split-heading">Section heading</h2>
+
+        <div class="split">
+          <figure>
+            <!-- Replace with a real file from images/ -->
+            <img src="images/your-photo.jpg" alt="Describe what is in the photo." width="900" height="1125" />
+            <figcaption>
+              Caption.
+              <span class="field-note">Captured 14 March, 9:12am</span>
+            </figcaption>
+          </figure>
+
+          <div>
+            <p>Text that sits beside the photo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEFORE AND AFTER
+         The two photos are the same file with the same alt text.
+         The captions differ. That is the joke, so keep both
+         timestamps identical.
+         Wide tables go inside <div class="table-scroll"> so they
+         scroll sideways on a phone instead of squashing. -->
     <section class="paperwork" aria-labelledby="evidence-heading">
-      <h2 id="evidence-heading">Verified member progress<a class="fn-ref" id="ref-2" href="#fn-2" aria-label="Footnote 2">2</a></h2>
+      <div class="wrap">
+        <p class="stamp">Section 04 &middot; Documented outcome</p>
+        <h2 id="evidence-heading">Verified member progress<a class="fn-ref" id="ref-2" href="#fn-2"
+            aria-label="Footnote 2">2</a></h2>
 
-      <figure>
-        <img src="images/member-0041.jpg" alt="A person standing in front of a plain wall in gym clothes." width="800" height="1000" />
-        <figcaption>
-          Before
-          <span class="field-note">Captured 14 March, 9:12am</span>
-        </figcaption>
-      </figure>
+        <div class="split split-wide">
+          <div class="evidence">
+            <figure>
+              <!-- Replace with a real file from images/ -->
+              <img src="images/your-photo.jpg"
+                alt="A person standing in front of a plain wall in gym clothes." width="800" height="1000" />
+              <figcaption>
+                Before
+                <span class="field-note">Captured 14 March, 9:12am</span>
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="images/your-photo.jpg"
+                alt="A person standing in front of a plain wall in gym clothes." width="800" height="1000" />
+              <figcaption>
+                After, fourteen months
+                <span class="field-note">Captured 14 March, 9:12am</span>
+              </figcaption>
+            </figure>
+          </div>
 
-      <figure>
-        <img src="images/member-0041.jpg" alt="A person standing in front of a plain wall in gym clothes." width="800" height="1000" />
-        <figcaption>
-          After, fourteen months
-          <span class="field-note">Captured 14 March, 9:12am</span>
-        </figcaption>
-      </figure>
+          <div>
+            <p>Supporting text.</p>
+
+            <div class="table-scroll">
+              <table>
+                <caption>Table caption</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Column</th>
+                    <th scope="col">Column</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Row label</th>
+                    <td>Value</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- The footnote list. Last section on every page. 
-     script.js fills this in. -->
+    <!-- THE REGISTER
+         Last section on every page. script.js fills this in from
+         the REGISTER object. Your page has an entry in there.
+         Replace the placeholder text, then put a matching
+         <a class="fn-ref"> marker next to each claim above.
+         The numbers have to match or the link is broken. -->
     <section class="paperwork" aria-labelledby="register-heading">
-      <h2 id="register-heading">Register of qualifications</h2>
-      <ol class="register" id="register-list">
-        <li>Loading&hellip;</li>
-      </ol>
+      <div class="wrap">
+        <p class="stamp">Schedule A</p>
+        <h2 id="register-heading">Register of qualifications</h2>
+        <ol class="register" id="register-list">
+          <li>Loading&hellip;</li>
+        </ol>
+        <noscript>
+          <p class="field-note">The register is unavailable. All claims on this page stand unqualified.</p>
+        </noscript>
+      </div>
     </section>
 
   </main>
 
-  <footer class="paperwork">
-    <p class="stamp">Form MWC-000 &middot; Revision 14</p>
-    <p>&copy; 2026 Meridian Wellness Collective</p>
-    <p><a href="contact.html">Contact</a> &middot; <a href="resources.html">Resources</a></p>
+  <!-- FOOTER
+       Same on every page except the revision number, which
+       matches your header. -->
+  <footer class="paperwork site-footer">
+    <div class="wrap">
+      <p class="stamp">Form MWC-000 &middot; Revision 14</p>
+      <p>&copy; 2026 Meridian Wellness Collective</p>
+      <p><a href="contact.html">Contact</a> &middot; <a href="resources.html">Resources</a></p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
