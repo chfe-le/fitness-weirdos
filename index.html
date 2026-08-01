@@ -1,23 +1,33 @@
-
-
-
-Index · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | Meridian Wellness Collective</title>
-  <meta name="description" content="Meridian Wellness Collective. A wellness facility on the second floor. Enrolment is ongoing." />
+  <meta name="description" content="Meridian Wellness Collective. A wellness facility on the second floor
+  of the Meridian building in Detroit. Enrolment is ongoing." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
  
   <header class="paperwork site-header">
-    <p class="stamp">Form MWC-000 &middot; Revision 14</p>
-    <a class="brand" href="index.html">Meridian Wellness Collective</a>
-    <nav class="site-nav" aria-label="Main">
+    <div class="header-bar">
+      <p class="stamp">Form MWC-000 &middot; Revision 14</p>
+      <p class="stamp header-contact">
+        <a href="tel:+13135550041">(313) 555-0041</a>
+        <span aria-hidden="true">&middot;</span>
+        Mon to Fri, 5:00am to 10:00pm
+      </p>
+    </div>
+ 
+    <div class="header-main">
+      <a class="brand" href="index.html">
+        Meridian Wellness Collective
+        <span class="brand-sub">Second floor &middot; Est. 2019</span>
+      </a>
+
+  <nav class="site-nav" aria-label="Main">
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="services.html">Services</a></li>
@@ -25,6 +35,9 @@ Index · HTML
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+
+    <a class="button button-primary header-cta" href="contact.html">Begin Intake</a>
+  </div>
   </header>
  
   <main id="main">
@@ -35,11 +48,46 @@ Index · HTML
         <h1 id="promise-heading" class="promise">
           You are already stronger. We simply have not measured it yet.<a class="fn-ref" id="ref-1" href="#fn-1" aria-label="Footnote 1">1</a>
         </h1>
-        <p class="lede">Meridian Wellness Collective has been serving the second floor since 2019. Enrolment is ongoing. Enrolment has always been ongoing.</p>
+        <p class="lede">Meridian Wellness Collective has been serving the next level of wellness (second floor) since 2019. Enrolment is ongoing. Enrolment has always been ongoing.</p>
         <p><a class="button" href="contact.html">Request an intake appointment</a></p>
       </div>
     </section>
  
+    <!--Section 01A Social Proof-->
+    <section class="paperwork" aria-labelledby="figures-heading">
+      <div class="wrap">
+        <p class="stamp">Section 01A &middot; Filed figures</p>
+        <h2 id="figures-heading">The Collective, by the numbers</h2>
+        <dl class="stats">
+          <div class="stat">
+            <dt>Years in operation</dt>
+            <dd>7</dd>
+          </div>
+          <div class="stat">
+            <dt>Square feet</dt>
+            <dd>9,000</dd>
+          </div>
+          <div class="stat">
+            <dt>Members enrolled<a class="fn-ref" id="ref-9" href="#fn-9" aria-label="Footnote 9">9</a></dt>
+            <dd>412</dd>
+          </div>
+          <div class="stat">
+            <dt>Members currently on site</dt>
+            <dd>Infinite</dd>
+          </div>
+          <div class="stat">
+            <dt>Sessions offered weekly</dt>
+            <dd>48</dd>
+          </div>
+          <div class="stat">
+            <dt>Members who have lapsed</dt>
+            <dd>0</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+    
+    
     <!-- Section 02: the schedule -->
 <section class="paperwork" aria-labelledby="schedule-heading">
       <div class="wrap">
