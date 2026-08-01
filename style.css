@@ -381,7 +381,6 @@ dd {
   .resource-grid { grid-template-columns: repeat(3, 1fr); }
   .supplemental-links { grid-template-columns: repeat(2, 1fr); }
   .form-grid { grid-template-columns: 1fr 1fr; }
-}
  
  
 /* 6. PER PAGE
@@ -717,4 +716,5 @@ button[type="submit"]:hover {
 }
 
 @media (min-width: 768px) {
-  .wrap { padding-left: 2rem; padding-right: 2rem; }
+  .wrap { padding-left: 2rem; padding-right: 2rem;}
+  } 
