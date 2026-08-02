@@ -10,12 +10,10 @@ planData.forEach(plan => {
             <h3>${plan.plan}</h3>
             <p>${plan.description}</p>
             <h4>${plan.price}</h4>
-
-            <ul>
-                ${plan.features.map(feature => `<li>${feature}</li>`).join("")}
-            </ul>
+            <ul> ${plan.features.map(feature => `<li>${feature}</li>`).join("")}</ul>
         </article>
     `;
 });
 
 membershipPlans.innerHTML = html;
+
