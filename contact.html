@@ -91,6 +91,7 @@
                     <div class="field">
                         <label for="blood">Your Blood Type<span class="required">*</span></label>
                         <select name="blood" id="blood" required>
+                            <option value="" disabled selected hidden>Select an option</option>
                             <option value="o-neg">O-</option>
                             <option value="o-pos">O+</option>
                             <option value="a-neg">A-</option>
@@ -116,7 +117,15 @@
                     </div>
                     <div class="field">
                         <label for="marital">Your Marital Status<span class="required">*</span></label>
-                        <input type="text" id="marital" name="marital" required placeholder="Marital Status">
+                        <select name="marital" id="marital" required>
+                            <option value="" disabled selected hidden>Select an option</option>
+                            <option value="single">Single (never married)</option>
+                            <option value="single">Married</option>
+                            <option value="single">Divorced</option>
+                            <option value="single">Widowed</option>
+                            <option value="complicated">It's Complicated</option>
+                        </select>
+                        <!--<input type="text" id="marital" name="marital" required placeholder="Marital Status">-->
                     </div>
                     <div class="field">
                         <label for="numAdults">How many adult Meridianites would like to join us?<span class="required">*</span></label>
