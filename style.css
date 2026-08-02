@@ -1091,7 +1091,7 @@ button[type="submit"]:hover {
   color: var(--ad-lilac);
 }
 
-/*.childcare-grid{
+.childcare-grid{
   display:grid;
   grid-template-columns: 1fr;
   gap:32px;
@@ -1110,4 +1110,3 @@ button[type="submit"]:hover {
   display:block;
   border-radius:3px;
 }
-  */
