@@ -1,7 +1,7 @@
 export const planData = [
     {
         plan: "Bronze",
-        price: "$39.99",
+        price: "$39.99/month",
         description: "Build your foundation with essential wellness services.",
         features: [
             "24/7 Fitness Center Access",
@@ -12,7 +12,7 @@ export const planData = [
     },
     {
         plan: "Silver",
-        price: "$79.99",
+        price: "$79.99/month",
         description: "Elevate your routine with premium recovery and training.",
         features: [
             "Unlimited Premium Classes",
@@ -23,7 +23,7 @@ export const planData = [
     },
     {
         plan: "Gold",
-        price: "$149.99",
+        price: "$149.99/month",
         description: "Experience complete optimization through Meridian Wellness.",
         features: [
             "Unlimited IV Infusions",
