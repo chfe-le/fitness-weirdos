@@ -1092,3 +1092,23 @@ button[type="submit"]:hover {
 .contact-banner p{
   color: var(--ad-lilac);
 }
+
+.childcare-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:32px;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .childcare-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.childcare-image img {
+  width: 100%;
+  height: auto;
+  display:block;
+  border-radius:3px;
+}
