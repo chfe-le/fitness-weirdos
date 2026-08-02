@@ -74,7 +74,7 @@
                     </div>
                     <div class="field">
                         <label for="date">Your Date of Birth<span class="required">*</span></label>
-                        <input type="date" id="date" name="date" required autocomplete="bday" placeholder="Date of Birth">
+                        <input type="date" id="date" name="date" required autocomplete="bday">
                     </div>
                     <div class="field">
                         <label for="street-address">Your Street Address<span class="required">*</span></label>
@@ -143,15 +143,16 @@
                     <div class="field">
                         <label for="plan">Which membership plan are you interested in?<span class="required">*</span></label>
                         <select name="plan" id="plan" required>
+                            <option value="" disabled selected hidden>Select an option</option>
                             <option value="bronze">Bronze: $39.99/mo</option>
                             <option value="silver">Silver: $79.99/mo</option>
-                            <option value="gold" selected>Gold $149.99/mo</option>
+                            <option value="gold">Gold $149.99/mo</option>
                         </select>
                         <!--<input type="text" id="plan" name="plan" required placeholder="Plan Selection">-->
                     </div>
                     <div class="field">
                         <label for="app">Please attach an application for consideration<span class="required">*</span></label>
-                        <input type="file" id="app" name="app" accept=".pdf" required placeholder="Application">
+                        <input type="file" id="app" name="app" accept=".pdf">
                     </div>
                     <button type="submit">Submit</button>
                 </form>
@@ -185,7 +186,7 @@
                 <aside class="childcare-image">
                 <img src="images/child_training.jpg"
                 alt="Two adults walking outside one pushing a stroller with a child, the other wearing a backpack."
-                width="1200" height="675"/>
+                width="1200" height="675">
                 </aside>
             </div>
         </section>
