@@ -223,42 +223,42 @@ header nav a {
 header nav a:hover {
   color: var(--ad-cyan);
 }
-#page-head {
+#res-page-head {
   text-align: center;
 }
 
-#wellness-heading {
+#res-wellness-heading {
   text-align: center;
 }
-.video {
+.res-video {
   margin: 0 0 2.5rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid #e0e0e0;
 }
  
-.video-content {
+.res-video-content {
   max-width: 640px;
   margin: 0 auto;
 }
  
-.video-content video {
+.res-video-content video {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
  
-.video-content figcaption {
+.res-video-content figcaption {
   padding-top: 0.5rem;
   text-align: center;
 }
  
-.resource-grid {
+.res-resource-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.25rem;
 }
  
-.resource-card {
+.res-resource-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -271,12 +271,12 @@ header nav a:hover {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
  
-.resource-card:hover {
+.res-resource-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
  
-.resource-card a {
+.res-resource-card a {
   flex: 1;
   font-weight: 600;
   font-size: 1.05rem;
@@ -284,29 +284,29 @@ header nav a:hover {
   text-decoration: none;
 }
  
-.resource-card a:hover {
+.res-resource-card a:hover {
   color: #ff6a00;
   text-decoration: underline;
 }
  
-.resource-card img {
+.res-resource-card img {
   width: 100px;
   height: 100px;
   object-fit: contain;
-  background: #f2f2f2; /* fills any empty space contain leaves around non-square photos */
+  background: #f2f2f2; 
   border-radius: 8px;
   flex-shrink: 0;
 }
 
  
 /* ---------- Supplemental products grid ---------- */
-.supplemental {
+.res-supplemental {
   margin-top: 2.5rem;
   padding-top: 2rem;
   border-top: 1px solid #e0e0e0;
 }
  
-.supplemental-links {
+.res-supplemental-links {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
