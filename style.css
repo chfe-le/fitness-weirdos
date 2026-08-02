@@ -782,3 +782,26 @@ button[type="submit"]:hover {
 @media (min-width: 768px) {
   .wrap { padding-left: 2rem; padding-right: 2rem;}
   } 
+
+.contact-heading {
+  padding-bottom: 0;
+}
+
+.contact-banner{
+  padding-bottom:0;
+  background: var(--ad-bg);
+  color: var(--ad-text);
+  padding: 48px 0;
+  border-top: 1px solid var(--ad-line);
+  border-bottom: 1px solid var(--ad-line);
+}
+
+.contact-banner h2{
+  color: var(--ad-cyan);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-banner p{
+  color: var(--ad-lilac);
+}
