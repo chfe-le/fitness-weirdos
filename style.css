@@ -565,12 +565,22 @@ dd {
  
  
 /* Resources - Wyatt. Prefix: res- */
- #res-page-head {
+ 
+#res-page-head {
+  font-size: 2.25rem;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
   text-align: center;
+  font-family: var(--font-display);
 }
 
 #res-wellness-heading {
+  font-size: 1.75rem;
+  font-weight: normal;
+  line-height: 1.1;
   text-align: center;
+  font-family: var(--font-display);
 }
 .res-video {
   margin: 0 0 2.5rem;
@@ -642,56 +652,42 @@ dd {
 
  
 /* ---------- Supplemental products grid ---------- */
-.res-supplemental {
-  margin-top: 2.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid #e0e0e0;
-}
- 
 .res-supplemental-links {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.25rem;
 }
- 
-.res-supplemental-links {
+
+.res-supplemental-links > a {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   background: #fff;
   border: 1px solid #e5e5e5;
   border-radius: 10px;
   padding: 1rem;
   text-align: center;
+  text-decoration: none;
+  color: inherit;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
- 
-.res-supplemental-links:hover {
+
+.res-supplemental-links > a:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #ff6a00;
 }
- 
+
 .res-supplemental-links img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 0.75rem;
+  display: block;
 }
- 
-.res-supplemental-links a {
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: #1a1a1a;
-  text-decoration: none;
-  margin-bottom: 0.4rem;
-}
- 
-.res-supplemental-links a:hover {
-  color: #ff6a00;
-  text-decoration: underline;
-}
- 
+
 .res-supplemental-links p {
   margin: 0;
   font-size: 0.9rem;
@@ -699,13 +695,11 @@ dd {
   line-height: 1.4;
 }
 
- @media (max-width: 480px) {
-  .supplemental-links {
+@media (max-width: 480px) {
+  .res-supplemental-links {
     grid-template-columns: 1fr;
   }
 }
- 
- 
 /* Contact - Christina. Prefix: con- */
  
 form {
