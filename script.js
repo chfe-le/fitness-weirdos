@@ -223,5 +223,3 @@ if (numChildrenSelect) {
         }
     });
 }
-
-i
