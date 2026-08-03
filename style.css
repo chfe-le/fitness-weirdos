@@ -810,7 +810,7 @@ h1 {
   padding: 0.25rem 0;
 }
 
- 
+
 /* Resources - Wyatt. Prefix: res- */
  
 #res-page-head {
@@ -829,34 +829,35 @@ h1 {
   text-align: center;
   font-family: var(--font-display);
 }
+
 .res-video {
   margin: 0 0 2.5rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid #e0e0e0;
 }
- 
+
 .res-video-content {
   max-width: 640px;
   margin: 0 auto;
 }
- 
+
 .res-video-content video {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
- 
+
 .res-video-content figcaption {
   padding-top: 0.5rem;
   text-align: center;
 }
- 
+
 .res-resource-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.25rem;
 }
- 
+
 .res-resource-card {
   display: flex;
   align-items: center;
@@ -869,12 +870,12 @@ h1 {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
- 
+
 .res-resource-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
- 
+
 .res-resource-card a {
   flex: 1;
   font-weight: 600;
@@ -882,23 +883,29 @@ h1 {
   color: #1a1a1a;
   text-decoration: none;
 }
- 
+
 .res-resource-card a:hover {
   color: #ff6a00;
   text-decoration: underline;
 }
- 
+
 .res-resource-card img {
   width: 100px;
   height: 100px;
   object-fit: contain;
-  background: #f2f2f2; 
+  background: #f2f2f2;
   border-radius: 8px;
   flex-shrink: 0;
 }
 
- 
+
 /* ---------- Supplemental products grid ---------- */
+.res-supplemental {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
 .res-supplemental-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -920,6 +927,7 @@ h1 {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
+
 .res-supplemental-links > a:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -935,6 +943,19 @@ h1 {
   display: block;
 }
 
+.res-supplemental-links a {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  margin-bottom: 0.4rem;
+}
+
+.res-supplemental-links a:hover {
+  color: #ff6a00;
+  text-decoration: underline;
+}
+
 .res-supplemental-links p {
   margin: 0;
   font-size: 0.9rem;
@@ -942,13 +963,19 @@ h1 {
   line-height: 1.4;
 }
 
-@media (min-width: 400px) {
+@media (max-width: 480px) {
+  .supplemental-links {
+    grid-template-columns: 1fr;
+  }
+
+
+
   .res-supplemental-links {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 /* Contact - Christina. Prefix: con- */
- 
+
 form {
   background: var(--paper-surface);
   border: 1px solid var(--paper-line);
