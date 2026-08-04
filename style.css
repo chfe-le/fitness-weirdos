@@ -1,6 +1,5 @@
 /*Every section in the HTML needs a <div class="wrap"> directly
-inside it. That div is what creates page padding and the
-max width. Without it the text touches the screen edge. */
+inside it. */
 
 
 /* 1. Colors and fonts */
@@ -220,8 +219,9 @@ img {
 
 
 /* 5. LAYOUT
-   Mobile first. One breakpoint at 768px, at the bottom of
-   this section. */
+   Mobile first. Everything in this section and in section 6
+   is the phone layout. The desktop rules live in section 5B
+   at the very BOTTOM of this file. */
 
 .wrap {
   max-width: 1000px;
@@ -515,72 +515,17 @@ dd {
 }
 
 
-/* 5B. BREAKPOINT
-   Everything above is the mobile layout. */
-
-h1 {
-  font-size: 3rem;
-}
-
-.promise {
-  font-size: 4rem;
-}
-
-.header-main {
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--gap-lg);
-}
-
-.header-cta {
-  align-self: center;
-}
-
-.split {
-  grid-template-columns: 1fr 1fr;
-  align-items: start;
-}
-
-.split-wide {
-  grid-template-columns: 1fr 1.4fr;
-}
-
-.stats {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.gallery {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.quotes {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.visit {
-  grid-template-columns: 1fr 1fr;
-}
-
-.svc-plans {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.resource-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.supplemental-links {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.form-grid {
-  grid-template-columns: 1fr 1fr;
-}
+/* The 768px breakpoint used to sit here. It has been moved to
+   section 5B at the BOTTOM of this file. Section 6 below
+   redeclares several of the same grid selectors, and later
+   rules win, so the breakpoint has to come after section 6 to
+   have any effect. Do not move it back up here. */
 
 
 /* 6. PER PAGE
-   Add rules under your name. Prefix your class names. */
+   Add rules under your name. Prefix your class names.
+   These are the phone-width rules. Anything that should only
+   apply on a wide screen goes in section 5B at the bottom. */
 
 
 /* Home - Danny */
@@ -632,18 +577,13 @@ h1 {
 }
 
 
-/* Before and after */
+/* Before and after. Side by side at every width, because the
+   comparison is the point. */
 .evidence {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--gap-lg);
-  margin-bottom: var(--gap-lg);
-}
-
-.split .evidence {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--gap);
+  margin-bottom: var(--gap-lg);
 }
 
 .evidence figure {
@@ -771,7 +711,7 @@ h1 {
   letter-spacing: 0.06em;
 }
 
-/* Membership plans, built by script.js from planData */
+/* Membership plans, built by script.js from PLAN_DATA */
 .svc-plans {
   display: grid;
   grid-template-columns: 1fr;
@@ -812,7 +752,7 @@ h1 {
 
 
 /* Resources - Wyatt. Prefix: res- */
- 
+
 #res-page-head {
   font-size: 2.25rem;
   font-weight: normal;
@@ -927,7 +867,6 @@ h1 {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-
 .res-supplemental-links > a:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -964,16 +903,12 @@ h1 {
 }
 
 @media (max-width: 480px) {
-  .supplemental-links {
-    grid-template-columns: 1fr;
-  }
-
-
-
   .res-supplemental-links {
     grid-template-columns: 1fr;
   }
 }
+
+
 /* Contact - Christina. Prefix: con- */
 
 form {
@@ -1060,20 +995,11 @@ button[type="submit"]:hover {
   border-color: var(--paper-text);
 }
 
-@media (min-width: 768px) {
-  .wrap {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .wrap { padding-left: 2rem; padding-right: 2rem;}
-  } 
-
 .contact-heading {
   padding-bottom: 0;
 }
 
-.contact-banner{
-  padding-bottom:0;
+.contact-banner {
   background: var(--ad-bg);
   color: var(--ad-text);
   padding: 48px 0;
@@ -1081,32 +1007,106 @@ button[type="submit"]:hover {
   border-bottom: 1px solid var(--ad-line);
 }
 
-.contact-banner h2{
+.contact-banner h2 {
   color: var(--ad-cyan);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.contact-banner p{
+.contact-banner p {
   color: var(--ad-lilac);
 }
 
-.childcare-grid{
-  display:grid;
+.childcare-grid {
+  display: grid;
   grid-template-columns: 1fr;
-  gap:32px;
+  gap: 32px;
   align-items: center;
-}
-
-@media (min-width: 768px) {
-  .childcare-grid {
-    grid-template-columns: 2fr 1fr;
-  }
 }
 
 .childcare-image img {
   width: 100%;
   height: auto;
-  display:block;
-  border-radius:3px;
+  display: block;
+  border-radius: 3px;
+}
+
+
+/* 5B. BREAKPOINT
+   Everything above this block is the phone layout. These are
+   the rules that only apply from 768px up.
+
+   THIS BLOCK MUST STAY AT THE END OF THE FILE. Section 6
+   declares .split-wide, .stats, .gallery, .quotes, .visit and
+   .svc-plans as single column. CSS applies the last matching
+   rule, so if this block moves above section 6 the desktop
+   layout silently stops working. */
+
+@media (min-width: 768px) {
+
+  /* Type scales up */
+  h1 {
+    font-size: 3rem;
+  }
+
+  .promise {
+    font-size: 4rem;
+  }
+
+  /* Page padding widens */
+  .wrap {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* Header goes from stacked to a single row */
+  .header-main {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-lg);
+  }
+
+  .header-cta {
+    align-self: center;
+  }
+
+  /* Two column layouts */
+  .split {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .split-wide {
+    grid-template-columns: 1fr 1.4fr;
+  }
+
+  .visit {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .childcare-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  /* Three column layouts */
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .quotes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .svc-plans {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
