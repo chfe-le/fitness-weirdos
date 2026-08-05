@@ -994,6 +994,18 @@ button[type="submit"]:hover {
   background: var(--paper-text);
   border-color: var(--paper-text);
 }
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: none;
+}
+
+.checkbox-field input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  flex-shrink: 0;
+}
 
 .contact-heading {
   padding-bottom: 0;
