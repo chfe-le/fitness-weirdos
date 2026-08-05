@@ -4,8 +4,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Home | Meridian Wellness Collective</title>
-<meta name="description" content="Meridian Wellness Collective. A wellness facility on the second floor of the Meridian building in Detroit. Enrolment is ongoing." />
+<title>Contact | Meridian Wellness Collective</title>
+<meta name="description" content="Contact Meridian Wellness Collective to begin enrollment for you and your family." />
 <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -101,7 +101,6 @@
                             <option value="ab-neg">AB-</option>
                             <option value="ab-pos">AB+</option>
                         </select>
-                        <!--<input type="text" id="blood" name="blood" required placeholder="Blood Type">-->
                     </div>
                     <div class="field">
                         <label for="diet">Your Current Diet<span class="required">*</span></label>
@@ -120,12 +119,11 @@
                         <select name="marital" id="marital" required>
                             <option value="" disabled selected hidden>Select an option</option>
                             <option value="single">Single (never married)</option>
-                            <option value="single">Married</option>
-                            <option value="single">Divorced</option>
-                            <option value="single">Widowed</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                            <option value="widowed">Widowed</option>
                             <option value="complicated">It's Complicated</option>
                         </select>
-                        <!--<input type="text" id="marital" name="marital" required placeholder="Marital Status">-->
                     </div>
                     <div class="field">
                         <label for="numAdults">How many adult Meridianites would like to join us?<span class="required">*</span></label>
@@ -138,7 +136,6 @@
                             <option value="fitness-classes">Fitness Classes (Load Theory, HIIS, Stillness Circut, etc.)</option>
                             <option value="coaching">Coaching (Personal Training,Lifestyle Optimization, AI Wellness Consultant, etc.)</option>
                         </select>
-                        <!--<input type="text" id="services" name="services" required placeholder="Services">-->
                     </div>
                     <div class="field">
                         <label for="plan">Which membership plan are you interested in?<span class="required">*</span></label>
@@ -148,12 +145,17 @@
                             <option value="silver">Silver: $79.99/mo</option>
                             <option value="gold">Gold $149.99/mo</option>
                         </select>
-                        <!--<input type="text" id="plan" name="plan" required placeholder="Plan Selection">-->
                     </div>
                     <div class="field">
                         <label for="app">Please attach an application for consideration<span class="required">*</span></label>
-                        <input type="file" id="app" name="app" accept=".pdf">
+                        <input type="file" id="app" name="app" required accept=".pdf">
                     </div>
+                    <div class="field">
+                        <label>
+                        <input type="checkbox" required>
+                        I acknowledge that data submitted becomes property of the Collective and may be retained indefinitely.
+                        </label>
+                        </div>
                     <button type="submit">Submit</button>
                 </form>
             </div>
@@ -175,7 +177,7 @@
                         <select id="numChildren" name="numChildren">
                             <option value="">-- Select --</option>
                         </select>
-                            <div id="childrenContainer"></div>
+                            <div id="childrenContainer" aria-live="polite"></div>
                     </div>
                     <div class="field">
                         <label for="specialInstructions">Do any of the children require special instructions? If so, please describe:<span class="required">*</span></label>
